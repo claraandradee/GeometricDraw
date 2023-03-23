@@ -1,0 +1,6 @@
+C:\Users\u22124\source\repos\ProjetoI-EditorGrafico\apGrafico\apGrafico\obj\Debug\apGrafico.csproj.AssemblyReference.cache
+C:\Users\u22124\source\repos\ProjetoI-EditorGrafico\apGrafico\apGrafico\obj\Debug\apGrafico.csproj.SuggestedBindingRedirects.cache
+C:\Users\u22124\source\repos\ProjetoI-EditorGrafico\apGrafico\apGrafico\obj\Debug\apGrafico.frmGrafico.resources
+C:\Users\u22124\source\repos\ProjetoI-EditorGrafico\apGrafico\apGrafico\obj\Debug\apGrafico.Properties.Resources.resources
+C:\Users\u22124\source\repos\ProjetoI-EditorGrafico\apGrafico\apGrafico\obj\Debug\apGrafico.csproj.GenerateResource.cache
+C:\Users\u22124\source\repos\ProjetoI-EditorGrafico\apGrafico\apGrafico\obj\Debug\apGrafico.csproj.CoreCompileInputs.cache
