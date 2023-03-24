@@ -9,7 +9,6 @@ namespace apGrafico
 {
     class Ponto : IComparable<Ponto>
     {
-        private ListaSimples<Ponto> figuras = new ListaSimples<Ponto>();
         private int x, y; //indicam as posições do plano cartesiano 
         private Color cor;
 
