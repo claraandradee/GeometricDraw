@@ -3,6 +3,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
+namespace apGrafico
+{
+
+}
 public class ListaSimples<Ponto> 
     where Ponto : IComparable<Ponto>, IRegistro,
                      ICriterioDeSeparacao<Ponto>
