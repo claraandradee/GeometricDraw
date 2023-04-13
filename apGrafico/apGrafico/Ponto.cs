@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing; //declarações e classes necessárias para desenho gráfico
+using System.Windows.Forms;
 
 namespace apGrafico
 {
-    class Ponto : IComparable<Ponto>
+    public class Ponto : IComparable<Ponto>, IRegistro, ICriterioDeSeparacao<Ponto>
     {
         private int x, y; //indicam as posições do plano cartesiano 
         private Color cor;
@@ -36,13 +37,28 @@ namespace apGrafico
         public int X { get { return x; } set { x = value; }  }
         public int Y { get { return y; } set { y = value; }  }
 
-        public Color Cor { get { return cor; } set { cor = value; } }
+        public void setX(int X)
+        {
+          x = X;
+        }
+
+        public void setY(int Y)
+        {
+          y = Y;
+        }
+
+        public void setCor(Color novaCor) 
+        { 
+            cor = novaCor;  
+        }
+
+    public Color Cor { get { return cor; } set { cor = value; } }
 
         //metodo para desenhar
         public virtual void desenhar(Color cor, Graphics g)
         {
-            Pen pen = new Pen(cor);
-            g.DrawLine(pen, x, y, x, y); //para desenhar ponto no lugar indicado
+          Brush brush = new SolidBrush(cor);
+          g.FillEllipse(brush, X, Y, 2, 2);
         }
 
         //ToString da classe Ponto
@@ -50,7 +66,7 @@ namespace apGrafico
         {
             String cadeia = valor + "";
             while (cadeia.Length < quantasPosicoes)
-                cadeia = "0" + cadeia;
+                cadeia = " " + cadeia;
 
             return cadeia.Substring(0, quantasPosicoes); //corta no tamanho maximo se necessario
         }
@@ -72,6 +88,20 @@ namespace apGrafico
                    transformaString(Cor.R, 5) +
                    transformaString(Cor.G, 5) +
                    transformaString(Cor.B, 5);
+        }
+
+        string IRegistro.FormatoDeRegistro()
+        {
+            return X + " " + Y + " " + Cor;
+        }
+
+        bool ICriterioDeSeparacao<Ponto>.PodeSeparar()
+        {
+          int xPonto = x;
+          if(xPonto == 0) 
+            return true;
+
+          return false;
         }
     }
 }

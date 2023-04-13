@@ -25,5 +25,41 @@ namespace apGrafico
             g.DrawLine(pen, base.X,       base.Y,       //ponto inicial
                             pontoFinal.X, pontoFinal.Y);//fim da linha
         }
+
+        //ToString da classe Reta
+        public String transformaString(int valor, int quantasPosicoes)
+        {
+            String cadeia = valor + "";
+            while (cadeia.Length < quantasPosicoes)
+                cadeia = " " + cadeia;
+
+            return cadeia.Substring(0, quantasPosicoes); //corta no tamanho maximo se necessario
+        }
+
+        public String transformaString(String valor, int quantasPosicoes)
+        {
+            String cadeia = valor + "";
+            while (cadeia.Length < quantasPosicoes)
+                cadeia = cadeia + " ";
+
+            return cadeia.Substring(0, quantasPosicoes);
+        }
+
+        public override string ToString()
+        {
+            return transformaString("l", 5) +
+                   transformaString(X, 5) +
+                   transformaString(Y, 5) +
+                   transformaString(Cor.R, 5) +
+                   transformaString(Cor.G, 5) +
+                   transformaString(Cor.B, 5) +
+                   transformaString(pontoFinal.X, 5) +
+                   transformaString(pontoFinal.Y, 5);
+        }
+
+        string FormatoDeRegistro()
+        {
+            return X + " " + Y + " " + Cor;
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace apGrafico
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmGrafico());
+            Application.Run(new FrmGrafico());
         }
     }
 }
