@@ -5,4 +5,4 @@
 - Julia Enriquetto
 
 ## Ideia Principal: 
- Desenhos geométricos utilizando listas ligadas 
+ Desenhar figuras geométricas em um editor e armazená-las utilizando listas ligadas. 
